@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYOFFICE</title>
+
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+     <div id="dr">    
+       
+        
+        <a   id="usersi"><img id="user" src="img/d1.png" onclick="opensignup()"> <span id="si">تسجيل الدخول</span> </a>
+        <a   id="ad2" class="ad"> <img class="adimg" src="img/d2.png" onclick="opensignin()"> <span class="adspan"> مستخدم جديد</span> </a>
+        <a   id="ad4" class="ad"> <img class="adimg" src="img/d4.png"> <span class="adspan">   مستنداتي</span> </a>
+        <a   id="ad5" class="ad"> <img class="adimg" src="img/d5.png"> <span class="adspan">المكتبة</span> </a>
+        <a   id="ad6" class="ad"> <img class="adimg" src="img/d6.png" onclick="opensearch()" > <span class="adspan">بحث</span> </a>
+        <a   id="ad7" class="ad"> <img class="adimg" src="img/d7.png"> <span class="adspan">  الأعدادات </span> </a>
+      </div>
+    </div>
+    
+<div id="bb" onclick="closeNav()">        
+    <header>
+        <div id="head">
+            <div  id="HEAD"> 
+             <img src="img/Picsart_22-10-02_01-04-48-025.png" id="LOGO" onclick="window.location.href = 'index.html'" > 
+             <h3 id="NAME" onclick="window.location.href = 'index.html'" >MYOFFICE</h3>
+             <input placeholder="  search" type="search" name="" id="SEARCH" >
+             <img src="img/sttingicon.png" onclick="openNav()" alt="sttings" width="40px" id="STTINGS">
+             <img id="X" src="img/xicon.png"  onclick="closeNav()"   >
+             <img id="userd3" src="img/d3.png"  onclick="openprofile()"   >
+                <img id="searchicon" src="img/searchicon.png" onclick="opensearch()"  alt="sreach"   width="25px">
+                <img id="ball" src="img/ball2.png"  onclick=""   >
+                <img id="chat" src="img/chaticon.png"  onclick="openchat ()"   >
+                <img id="s4s" src="img/4s.png"  onclick=""   >
+            </div>
+            </div>
+    </header>
+    <div id="chatbox" onclick="closeNav()" >
+    <iframe  id="frame" onclick="closeNav()"  width="100%" height="93% " scrolling="auto" framebordar="0" src="home.html"></iframe>
+</div>
+</div> 
+<script src="js.js" ></script>
+</body>
+</html>

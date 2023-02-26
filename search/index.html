@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css.css">
+</head>
+<body style=" padding: 0%;">
+   <div style="margin: 0%; padding:1% 0% ; background-color: rgba(247, 244, 244, 0.945);  direction: rtl;">
+  <div style="margin: 0%; background-color: rgba(247, 244, 244, 0.945); padding:0%;" class=" text-right row ">
+    <div style="height:50% ; width: 5%;"  class="col-1 w-1">
+     <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="blue" class=" bi bi-funnel-fill" viewBox="0 0 16 16">
+       <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/>
+     </svg>
+    </div>
+     <h4 style="font-size:2vw; color:blue; " class="col-10">فلاتر البحث </h4>
+  </div>
+ 
+ <div style="position:sticky; z-index:20; top:0; margin: 0%; background-color: rgb(220,  220, 220); padding:1%; " >
+
+ <div  class=" row  m-2">
+ <div style="margin: 0% 0% 0% 0%;" class=" rounded-pill btn-outline-primary text-center row justify-content-center col-12 col-sm-6 col-md-4 col-lg-3 " > 
+  <h4 class="col-5"><label  for="stars">التقييم  </label> </h4>
+  <select id="stars" onchange=" filterSelection(this.value)" style="color:blue ; border-color:blue;" class=" bg-light shadow-none rounded-pill btn btn-outline-primary col-7  "> 
+   <option  selected="selected" value="all" >الكل</option>
+      <option  value="1">نجمة  </option>
+   <option  value="1">نجمتين</option>
+   <option  value="12"> نجمتين فأكثر</option>
+   <option  value="3"> ثلاث نجوم</option>
+   <option  value="13">ثلاث نجوم فأكثر  </option>
+   <option  value="4">أربعة نجوم</option>
+   <option  value="14"> أربعة نجوم فأكثر</option>
+   <option  value="5" >خمسة نجوم</option>
+  </select>
+ </div>
+ <div style="margin: 0% 0% 0% 0%;" class="  rounded-pill btn-outline-primary text-center row justify-content-center col-12 col-sm-6 col-md-4 col-lg-3 " > 
+  <h4 class="col-5"><label  for="stars">المكان   </label> </h4>
+  <select id="gov" onchange=" filterSelectiongov(this.value)" style="color:blue ; border-color:blue;" class="  bg-light shadow-none rounded-pill btn btn-outline-primary col-7  "> 
+    
+    <option  selected='selected' value="all" >الكل</option>
+  
+  </select>
+ </div>
+ <div style="margin: 0% 0% 0% 0%;" class=" rounded-pill btn-outline-primary text-center row justify-content-center col-12 col-sm-6 col-md-4 col-lg-3 " > 
+  <h4 class="col-5"><label  for="stars">التخصص</label> </h4>
+  <select id="ddd"  onchange=" law(this.value)" style="color:blue ; border-color:blue;" class=" bg-light shadow-none rounded-pill btn btn-outline-primary col-7  "> 
+    <option  value="all" >الكل</option>
+    <option id="law" selected value="law" >القانوني</option>
+  
+  
+  
+    
+  
+  </select>
+ </div>
+ <div style="margin: 0% 0% 0% 0%;" class=" rounded-pill btn-outline-primary text-center row justify-content-center col-12 col-sm-6 col-md-4 col-lg-3 " > 
+  <h4 class="col-5"><label  for="stars">الوظيفة </label> </h4>
+  <select id="jobs" onchange=" filterSelectionjob(this.value)" style="color:blue ; border-color:blue;" class=" bg-light shadow-none rounded-pill btn btn-outline-primary col-7  "> 
+   <option  selected="selected" value="all" >الكل</option>
+  
+  </select>
+ </div>
+</div>
+<div class="form-group row m-1 ">
+  <div class="col-10">
+   <input class="form-control  " type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+  </div> 
+  <div style="padding:0%; border-radius:10%;" class="col-2 bg-light ">
+  <div style="margin:0% ;" class=" btn btn-outline-primary m-0  w-100">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+    </svg>
+  </div>
+  </div>
+</div>
+</div>
+
+
+
+<div id="users">
+
+</div>
+ 
+   </div>
+<style> 
+
+
+.filterDiv {
+ 
+    display: none; /* Hidden by default */
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }</style>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js.js"></script>
+    <script>
+        function myFunction() {
+            var input, filter, names,div, n, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            div = document.getElementsByClassName("flip-card");
+            names = document.getElementsByClassName("username");
+            for (i = 0; i < div.length; i++) {
+                n = names[i];
+                txtValue = n.textContent || n.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    div[i].style.display = "";
+                } else {
+                    div[i].style.display = "none";
+                }
+            }
+        }
+
+   
+        </script>
+        
+</body>
+
+</html>

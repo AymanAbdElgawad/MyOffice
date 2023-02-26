@@ -1,0 +1,284 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .header {
+    padding: 0%;
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-columns:repeat(20 , 5%); 
+    grid-template-rows:repeat(5 , 20%); 
+    background: #1abc9c; 
+    color: white; 
+    background-image: url("imgs/1.jpg") ;
+    background-size:100% 400px;
+  }
+  
+  .header img {
+    z-index: 20;
+    grid-column:16/19;
+    grid-row: 3/5 ;
+border-radius: 50%;
+height: 300px;
+width: 300px;
+background-color: #ffffff;
+  }
+  #imguser {
+    grid-row: 3/5;
+    grid-column: 2/5;
+    
+  }
+ .info {
+    direction: rtl;
+background-color: #dddddd;
+    width: 100%;
+    height: 400px;
+    border-width:8px 0px;
+    border-style: solid;
+    display: grid;
+    border-color: rgba(190, 221, 241, 0.904);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns:repeat(40 , 2.5%); 
+    grid-template-rows:repeat(20 , 5%); 
+ }
+
+ .jobname {
+    color: blue;
+    grid-column: 28/40;
+    grid-row: 5/5;
+    font-size:50px;
+    padding-right: 35px;
+    margin-right: 20px;
+
+ }
+  .username {
+    color: blue;
+    grid-column: 1/13;
+    grid-row: 5/5;
+    font-size:50px;
+  }
+
+  #stars {
+    grid-column: 30/39;
+    grid-row: 8/8;
+    text-align: center;
+    background-color: #0fa5eeed;
+    
+    border-radius: 25px;
+
+   
+  }
+  #stars svg {
+    width:50px ;
+    height: 50px;
+  }
+  
+  #btn {
+grid-column:5;
+grid-row:8/8;
+margin-left: 50%;
+    color: blue;
+    background-color: #ffffff;
+    border-color: blue;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px 20px  20px 20Px;
+    
+  }
+ #btn:hover {
+
+    color: #ffffff;
+    background-color: blue;
+
+ } 
+ .d {
+   grid-column:1/8 ;
+    display: grid;
+    grid-template-columns:repeat(4, 25%) ;
+
+    align-items:center;
+    justify-content: end;
+    text-align: right;
+
+ }
+ .d svg {
+    width: 70%;
+    height: 70%;
+    grid-column: 1/2;
+ }
+
+ .d span {
+  font-size: 30px;
+  grid-column: 2/5;
+
+
+
+ }
+
+  #position {
+    grid-row:12 ;
+  } 
+  #Emial {
+    grid-row: 15;
+  }
+  #tel {
+    grid-row: 18;
+  }
+
+  #my {
+    grid-row:12 ;
+    grid-column: 21/28;
+  } 
+  #not {
+    grid-column: 23/35;
+    grid-row: 13/19;
+    text-align: right;
+ 
+
+  }
+ 
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Column container */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+    flex: 30%; /* Set the width of the sidebar */
+    background-color: #f1f1f1; /* Grey background color */
+    padding: 20px; /* Some padding */
+  }
+  
+  /* Main column */
+  .main {
+    direction: rtl;
+    flex: 70%; /* Set the width of the main content */
+    background-color: white; /* White background color */
+    padding: 20px; /* Some padding */
+  }* {
+  box-sizing: border-box;
+}
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%; /* Set the width of the sidebar */
+  background-color: #f1f1f1; /* Grey background color */
+  padding: 20px; /* Some padding */
+}
+
+/* Main column */
+.main {
+  flex: 70%; /* Set the width of the main content */
+  background-color: white; /* White background color */
+  padding: 20px; /* Some padding */
+}
+
+@media screen and (max-width: 700px) {
+    .row {
+      flex-direction: column;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+  }@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row2 {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row2,
+.row2 > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 100%;
+
+}
+
+/* Clear floats after rows */ 
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: rgb(236, 238, 255);
+  padding: 10px;
+}
+
+.side a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #747df8;
+  display: block;
+}
+
+/* Style links on mouse-over */
+.side a:hover {
+ background-color: #747df8;
+ color: #ffffff;
+}
